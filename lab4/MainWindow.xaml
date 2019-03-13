@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:lab4"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="#FF5DC1D1">
+        <Button x:Name="Add" Content="Добавить" HorizontalAlignment="Left" Margin="280,30,0,0" VerticalAlignment="Top" Width="118" Height="44" Background="White" FontSize="24" Click="Add_Click"/>
+        <ListBox x:Name="spis" HorizontalAlignment="Left" Height="227" Margin="10,122,0,0" VerticalAlignment="Top" Width="252" FontSize="36"/>
+        <TextBox x:Name="chis" HorizontalAlignment="Left" Height="77" Margin="10,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" FontSize="48"/>
+
     </Grid>
 </Window>

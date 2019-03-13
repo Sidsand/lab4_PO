@@ -23,6 +23,53 @@ namespace lab4
         public MainWindow()
         {
             InitializeComponent();
+           
+        }
+
+        public bool Ostatok(int ch)
+        {
+            if (ch < 0)
+            {
+                return false;
+            }
+            else
+            {
+                for (int i = 2; i < ch; i++)
+                {
+                    int z = ch % i;
+                    if (z == 0)
+                    {
+                        return false;
+                    }
+
+                }
+
+                return true;
+            }
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+
+                bool k = Ostatok(int.Parse(chis.Text));
+                if (k == false)
+                {
+                    Console.WriteLine("Error: Число не простое");
+                }
+                else
+                {
+                    spis.Items.Add(int.Parse(chis.Text));
+                    chis.Text = "";
+                }
+              
+
+            }
+            catch (FormatException) //реакция на неверный ввод
+            {
+                Console.WriteLine("Error: Введите число");
+            }
         }
     }
 }
